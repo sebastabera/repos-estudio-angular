@@ -1,0 +1,24 @@
+<div [ngClass]="alerta" class="alert" role="alert">
+  This is a success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+</div>
+
+
+<button class="btn btn-info" (click)="alerta = 'alert-info'">Info</button>
+<button class="btn btn-success" (click)="alerta = 'alert-success'">Success</button>
+
+<br><br>
+
+<h3 [ngClass]="{'text-danger': propiedades.danger, 'text-info': !propiedades.danger}">Hola mundo</h3>
+
+<button class="btn" (click)="propiedades.danger = !propiedades.danger"
+[ngClass]="{'btn-danger': propiedades.danger, 'btn-info': !propiedades.danger}">Cambiar</button>
+
+<br><br>
+
+<h3>Proceso Asíncrono</h3>
+
+<button (click)="ejecutar()" class="btn btn-primary" [disabled]="loading">
+  <i [ngClass]="{'fa-save': !loading, 'fa-spin fa-refresh': loading}" class="fa"></i> 
+  <span *ngIf="!loading">Guardar Cambios</span>
+  <span *ngIf="loading">Espere por favor</span>
+</button>
