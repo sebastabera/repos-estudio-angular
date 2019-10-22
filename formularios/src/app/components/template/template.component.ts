@@ -18,7 +18,7 @@ export class TemplateComponent implements OnInit {
     correo: null,
     pais: "CRI",
     sexo: "Hombre",
-    acepta: false;
+    acepta: false
   };
 
   paises = [{
@@ -39,8 +39,8 @@ export class TemplateComponent implements OnInit {
 
   guardar(forma:NgForm){
     console.log(forma);
-    console.log("valor: ", forma.value)
-    console.log("usuario:", this.usuario)
+    console.log("valor: ", forma.value);
+    console.log("usuario:", this.usuario);
   }
 
 }
